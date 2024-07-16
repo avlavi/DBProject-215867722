@@ -23,7 +23,7 @@ END Count_Active_Drivers;
 CREATE OR REPLACE PROCEDURE Promote_Soldiers (promotion_date DATE) IS
     -- Selects soldiers enlisted before the given promotion date
     CURSOR soldier_cursor IS
-        SELECT ID, Rank FROM Soldier WHERE Enlistment_Date < promotion_date;
+        SELECT ID, Rank FROM Soldier WHERE Enlistment_Date_ < promotion_date;
         
 BEGIN
     -- Promotes the relevant soldiers based on their current rank
